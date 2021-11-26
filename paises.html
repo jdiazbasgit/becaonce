@@ -6,12 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="paises.js" defer></script>
     <title>Document</title>
+    <style>
+
+        #bandera{
+            width: 300px;
+            height: 150px;
+        }
+        #escudo{
+            width: 150px;
+            height: 150px;
+        }
+
+    </style>
 </head>
-<body onload="cargaSelectContinentes()">
+<body onload="cargaSelectContinentes()" bgcolor="#fabada">
     continentes:<select  id="continentes" onchange="cargaPaisesDeContinente(this.value)">
         <option value="0">Selecciona continente...</option>
     </select>
     paises:<select  id="paises" onchange="cargaPais(this.value)"></select>
-    <img id="bandera" ><img id="escudo">
+    <img id="bandera" ><img id="escudo" >
 </body>
 </html>
