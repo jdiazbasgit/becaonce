@@ -26,7 +26,7 @@ cargaPaisesDeContinente = async (value) => {
 cargaDatos = (url) => {
   return new Promise((resolve, reject) => {
     fetch(url).then((response) => {
-
+//cambio de prueba
        // setTimeout(() => {
             resolve(response.json());
        //}, 5000);
