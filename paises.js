@@ -27,9 +27,9 @@ cargaDatos = (url) => {
   return new Promise((resolve, reject) => {
     fetch(url).then((response) => {
 
-        setTimeout(() => {
+       // setTimeout(() => {
             resolve(response.json());
-       }, 5000);
+       //}, 5000);
       
     });
   });
@@ -43,3 +43,13 @@ cargaSelectContinentes = () => {
     selectContinentes.appendChild(option);
   });
 };
+
+cargaPais=async (nombrePais)=>{
+  let url = `https://restcountries.com/v3.1/name/${nombrePais}`;
+  let pais=await cargaDatos(url);
+  let bandera=document.querySelector("#bandera")
+  let escudo=document.querySelector("#escudo")
+
+bandera.src=pais[0].flags.png;
+escudo.src=pais[0].coatOfArms.png
+}
