@@ -27,9 +27,9 @@ cargaDatos = (url) => {
   return new Promise((resolve, reject) => {
     fetch(url).then((response) => {
 
-        //setTimeout(() => {
+        setTimeout(() => {
             resolve(response.json());
-       //}, 5000);
+       }, 5000);
       
     });
   });
