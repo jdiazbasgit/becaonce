@@ -18,23 +18,29 @@
         height: 100px;
       }
       .alineado {
-        display: inline-block;
+       
+        display: inline-flexbox;
       }
+      #nombre{
+        font-size: 50px;
+        font-weight: bold;
+      }
+      
     </style>
   </head>
   <body onload="cargaSelectContinentes()">
     <div class="container">
-      <header>
-        <div class="alineado">
+      <header class="bg-warning">
+        <div class="alineado bg-danger">
           <img
             src="https://mainfacts.com/media/images/coats_of_arms/pe.png"
             class="bandera"
           />
         </div>
-        <div class="alineado align-text-center"><h1>PAISES</h1></div>
+        <div class="alineado align-text-center bg-success"><div id="nombre" class="text-center">PAISES</div></div>
 
-        <nav>
-          <ul class="nav">
+        <nav >
+          <ul class="nav justify-content-center">
             <li class="nav-item">
               <a class="nav-link" href="#">GENERALES</a>
             </li>
